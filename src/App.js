@@ -16,6 +16,9 @@ function App() {
   const putImage = (e) => {
     setImage(e.target.value);
   }
+  const exportMeme = () => {
+    alert("exportando...")
+  }
   
   return (
     <div className='App'>
@@ -28,10 +31,11 @@ function App() {
 
       <input onChange={putTopText} type="text" placeholder='Top text'/><br/>
       <input onChange={putBottomText}type="text" placeholder='Bottom text'/><br/>
-
+      <button onClick={exportMeme}>Export!</button>
       <div className='meme'>
         <span className='meme__topText'>{topText}</span><br/>
         <span className='meme__bottomText'>{bottomText}</span><br/>
+
         <img src = {`/img/${image}.jpg`}  alt="Meme"/>
       </div>
 
