@@ -6,7 +6,7 @@ function App() {
 
   const [topText, setTopText] = useState("");
   const [bottomText, setBottomText] = useState("");
-  const [image, setImage] = useState("");
+  const [image, setImage] = useState("Default");
 
   const putTopText = (e) =>{
     setTopText(e.target.value);
@@ -33,6 +33,7 @@ function App() {
   return (
     <div className='App'>
       <select onChange={putImage}>
+        <option value="none" selected disabled hidden>Select an Option</option>
         <option value="Disaster-Girl">Disaster girl</option>
         <option value="Ancients-Aliens">Ancients aliens</option>
         <option value="Futurama-Fry">Futurama</option>
@@ -41,7 +42,7 @@ function App() {
 
       <input onChange={putTopText} type="text" placeholder='Top text'/><br/>
       <input onChange={putBottomText}type="text" placeholder='Bottom text'/><br/>
-      <button onClick={exportMeme}>Export!</button>
+      <button onClick={exportMeme} style={{marginBottom: '10px'}}>Export!</button>
       <div className='meme' id = "meme">
         <span className='meme__topText'>{topText}</span><br/>
         <span className='meme__bottomText'>{bottomText}</span><br/>

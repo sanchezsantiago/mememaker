@@ -1,22 +1,37 @@
 .App {
   text-align: center;
 }
+select{
+  cursor: pointer;
+}
 .meme{
   display: flex;
   justify-content: center;
+  font-family: impact;
+  font-size: 2.5em;
+  text-transform: uppercase;
+  color: white;
+  letter-spacing: 1px;
+  text-shadow:2px 2px 0 #000,
+  -2px -2px 0 #000,
+  2px -2px 0 #000,
+  -2px 2px 0 #000,
+  0px 2px 0 #000,
+  2px 0px 0 #000,
+  0px -2px 0 #000,
+  -2px 0px 0 #000,
+  2px 2px 5px #000;
 }
 .meme span {
+  word-wrap: break-word;
   position: absolute;
-  width: 100%;
-  left: 0px;
+  width: 500px;
   font-size: 38px;
   color: white;
 }
 .meme__topText{
-  margin-top: 50px;
-  width: fit-content;
+  margin-top: 20px;
 }
 .meme__bottomText{
   margin-top: 450px;
-  width: fit-content;
 }
