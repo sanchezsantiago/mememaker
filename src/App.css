@@ -1,7 +1,10 @@
 .App {
   text-align: center;
 }
-
+.meme{
+  display: flex;
+  justify-content: center;
+}
 .meme span {
   position: absolute;
   width: 100%;
@@ -11,7 +14,9 @@
 }
 .meme__topText{
   margin-top: 50px;
+  width: fit-content;
 }
 .meme__bottomText{
   margin-top: 450px;
+  width: fit-content;
 }

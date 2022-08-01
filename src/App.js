@@ -1,5 +1,6 @@
 import './App.css';
 import {useState} from 'react';
+import html2canvas from 'html2canvas';
 
 function App() {
 
@@ -17,7 +18,16 @@ function App() {
     setImage(e.target.value);
   }
   const exportMeme = () => {
-    alert("exportando...")
+    html2canvas(document.querySelector("#meme"),{
+     width: 500,
+     x: 409
+    }).then(canvas => {
+      let img = canvas.toDataURL("image/jpg");
+      let link = document.createElement('a');
+      link.download = 'meme.jpg';
+      link.href = img;
+      link.click();
+  });
   }
   
   return (
@@ -32,7 +42,7 @@ function App() {
       <input onChange={putTopText} type="text" placeholder='Top text'/><br/>
       <input onChange={putBottomText}type="text" placeholder='Bottom text'/><br/>
       <button onClick={exportMeme}>Export!</button>
-      <div className='meme'>
+      <div className='meme' id = "meme">
         <span className='meme__topText'>{topText}</span><br/>
         <span className='meme__bottomText'>{bottomText}</span><br/>
 
