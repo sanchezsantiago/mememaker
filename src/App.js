@@ -53,9 +53,6 @@ function App() {
     </div>
   );
 }
-//Select image
-//Input text - First line
-//Input text - Second line
-//Export button
+
 
 export default App;
