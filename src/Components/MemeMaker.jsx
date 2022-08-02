@@ -31,7 +31,7 @@ const MemeMaker = () => {
  }
 
   return (
-    <div>
+    <div className='memeMaker'>
     <select onChange={putImage}>
         <option value="none" selected disabled hidden>Select an Option</option>
         <option value="Disaster-Girl">Disaster girl</option>
