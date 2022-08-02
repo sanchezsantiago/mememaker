@@ -42,7 +42,7 @@ const MemeMaker = () => {
 
     <input onChange={putTopText} type="text" placeholder='Top text'/><br/>
     <input onChange={putBottomText}type="text" placeholder='Bottom text'/><br/>
-    <button onClick={exportMeme} style={{marginBottom: '10px'}}>Export!</button>
+    <button onClick={exportMeme} style={{marginBottom: '10px'}} className="export-button">Export!</button>
     <div className='meme' id = "meme">
         <span className='meme__topText'>{topText}</span><br/>
         <span className='meme__bottomText'>{bottomText}</span><br/>

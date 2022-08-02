@@ -57,6 +57,23 @@ input{
     margin-top: 450px;
   }
 
+  button{
+    outline: none;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    height: 60px;
+    width: 210px;
+    opacity: 1;
+    background-color: #ffffff;
+    font-size: 18px;
+    border: 1px solid rgba(22, 76, 167, 0.6);
+  }
+  button:hover{
+    background-color: #60666d;
+  }
+
   @media only screen and (max-width: 600px) {
     .meme span{
       width: 350px;
